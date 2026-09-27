@@ -1,0 +1,37 @@
+:root {
+  /* Colour */
+  --color-bg: #f4f5f7;
+  --color-surface: #ffffff;
+  --color-ink: #17233a;
+  --color-ink-soft: #4d5a6e;
+  --color-border: #dde1e6;
+  --color-border-strong: #c3c9d1;
+  --color-accent: #1d4e89;
+  --color-accent-dark: #143a68;
+
+  --color-status-scheduled-bg: #fbf1de;
+  --color-status-scheduled-fg: #8a5a17;
+
+  --color-status-progress-bg: #e6edf6;
+  --color-status-progress-fg: #1d4e89;
+
+  --color-status-done-bg: #e4f1e9;
+  --color-status-done-fg: #1e7145;
+
+  --color-status-missed-bg: #fbeaea;
+  --color-status-missed-fg: #a83a3a;
+
+  --color-status-pending-bg: #eef0f2;
+  --color-status-pending-fg: #4d5a6e;
+
+  /* Type */
+  --font-ui: 'IBM Plex Sans', 'Segoe UI', Arial, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Consolas', monospace;
+
+  /* Layout */
+  --radius-sm: 3px;
+  --radius-md: 5px;
+  --sidebar-width: 240px;
+  --header-height: 60px;
+  --max-content-width: 920px;
+}
