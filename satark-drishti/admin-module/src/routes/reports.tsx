@@ -1,2 +1,0 @@
-import { createFileRoute } from "@tanstack/react-router"; import { ReportsPage } from "@/pages/satark-pages";
-export const Route=createFileRoute("/reports")({head:()=>({meta:[{title:"Reports — Satark Drishti"},{name:"description",content:"Analyze inspection coverage and evidence outcomes."},{property:"og:title",content:"Reports — Satark Drishti"},{property:"og:description",content:"Inspection and synchronization reporting dashboard."},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}),component:ReportsPage});

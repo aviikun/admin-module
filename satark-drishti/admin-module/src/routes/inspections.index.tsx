@@ -1,2 +1,0 @@
-import { createFileRoute } from "@tanstack/react-router"; import { InspectionsPage } from "@/pages/satark-pages";
-export const Route=createFileRoute("/inspections/")({head:()=>({meta:[{title:"Inspections — Satark Drishti"},{name:"description",content:"Review inspections and their evidence status."},{property:"og:title",content:"Inspections — Satark Drishti"},{property:"og:description",content:"Review field inspections and connected evidence."},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}),component:InspectionsPage});
