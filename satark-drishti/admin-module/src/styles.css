@@ -1,0 +1,51 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: calc(var(--radius) - 3px); --radius-md: calc(var(--radius) - 1px); --radius-lg: var(--radius); --radius-xl: calc(var(--radius) + 3px);
+  --color-background: var(--background); --color-foreground: var(--foreground); --color-card: var(--card); --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover); --color-popover-foreground: var(--popover-foreground); --color-primary: var(--primary); --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary); --color-secondary-foreground: var(--secondary-foreground); --color-muted: var(--muted); --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent); --color-accent-foreground: var(--accent-foreground); --color-destructive: var(--destructive); --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border); --color-input: var(--input); --color-ring: var(--ring); --color-success: var(--success); --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning); --color-warning-soft: var(--warning-soft); --color-info: var(--info); --color-info-soft: var(--info-soft);
+  --color-sidebar: var(--sidebar); --color-sidebar-foreground: var(--sidebar-foreground); --color-sidebar-muted: var(--sidebar-muted); --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent: var(--sidebar-accent); --color-sidebar-primary: var(--sidebar-primary); --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-brand-mark: var(--brand-mark); --color-brand-mark-foreground: var(--brand-mark-foreground); --color-evidence: var(--evidence); --color-map: var(--map); --color-map-road: var(--map-road); --color-overlay: var(--overlay);
+  --shadow-card: 0 1px 2px color-mix(in oklab,var(--foreground) 5%,transparent), 0 5px 20px color-mix(in oklab,var(--primary) 4%,transparent);
+  --shadow-card-hover: 0 14px 30px color-mix(in oklab,var(--primary) 11%,transparent);
+  --shadow-brand: 0 8px 20px color-mix(in oklab,var(--primary) 25%,transparent);
+}
+:root {
+  --radius:.5rem; --background:oklch(.975 .006 244); --foreground:oklch(.235 .04 255); --card:oklch(1 0 0); --card-foreground:oklch(.235 .04 255);
+  --popover:oklch(1 0 0); --popover-foreground:oklch(.235 .04 255); --primary:oklch(.43 .145 254); --primary-foreground:oklch(.99 0 0);
+  --secondary:oklch(.93 .016 244); --secondary-foreground:oklch(.29 .06 254); --muted:oklch(.955 .009 244); --muted-foreground:oklch(.52 .028 251);
+  --accent:oklch(.92 .035 244); --accent-foreground:oklch(.35 .11 254); --destructive:oklch(.58 .215 27); --destructive-foreground:oklch(.99 0 0);
+  --border:oklch(.895 .018 247); --input:oklch(.89 .018 247); --ring:oklch(.58 .14 250); --success:oklch(.55 .145 154); --success-soft:oklch(.95 .045 153);
+  --warning:oklch(.66 .145 72); --warning-soft:oklch(.955 .05 82); --info:oklch(.51 .14 244); --info-soft:oklch(.95 .035 243);
+  --sidebar:oklch(.205 .055 255); --sidebar-foreground:oklch(.97 .006 245); --sidebar-muted:oklch(.73 .025 248); --sidebar-border:oklch(.31 .052 254);
+  --sidebar-accent:oklch(.27 .06 254); --sidebar-primary:oklch(.52 .15 250); --sidebar-primary-foreground:oklch(.99 0 0); --brand-mark:oklch(.54 .16 249); --brand-mark-foreground:oklch(.99 0 0);
+  --evidence:oklch(.975 .016 239); --map:oklch(.94 .018 168); --map-road:oklch(.82 .02 168); --overlay:oklch(.15 .025 255 / .72);
+}
+.dark { --background:oklch(.17 .035 255); --foreground:oklch(.96 .006 245); --card:oklch(.22 .04 255); --card-foreground:oklch(.96 .006 245); --popover:oklch(.22 .04 255); --popover-foreground:oklch(.96 .006 245); --primary:oklch(.68 .14 247); --primary-foreground:oklch(.16 .03 255); --secondary:oklch(.28 .045 255); --secondary-foreground:oklch(.95 .006 245); --muted:oklch(.26 .035 255); --muted-foreground:oklch(.72 .025 248); --accent:oklch(.3 .055 251); --accent-foreground:oklch(.96 .006 245); --border:oklch(.34 .035 252); --input:oklch(.34 .035 252); --evidence:oklch(.235 .045 250); --map:oklch(.28 .025 170); --map-road:oklch(.39 .025 170); }
+@layer base { *{border-color:var(--color-border)} html{font-family:var(--font-sans)} body{margin:0;background:var(--color-background);color:var(--color-foreground);letter-spacing:0} button,a{letter-spacing:0} }
+@utility font-display { font-family:var(--font-display) }
+@utility status-success { color:var(--success);background:var(--success-soft) }
+@utility status-warning { color:var(--warning);background:var(--warning-soft) }
+@utility status-danger { color:var(--destructive);background:color-mix(in oklab,var(--destructive) 10%,var(--card)) }
+@utility status-info { color:var(--info);background:var(--info-soft) }
+@utility status-neutral { color:var(--muted-foreground);background:var(--muted) }
+@utility status-random { color:var(--primary);background:var(--info-soft) }
+@utility stat-primary { color:var(--primary);background:var(--info-soft) }
+@utility stat-success { color:var(--success);background:var(--success-soft) }
+@utility stat-warning { color:var(--warning);background:var(--warning-soft) }
+@utility stat-danger { color:var(--destructive);background:color-mix(in oklab,var(--destructive) 10%,var(--card)) }
+@utility map-grid { background-image:linear-gradient(var(--map-road) 1px,transparent 1px),linear-gradient(90deg,var(--map-road) 1px,transparent 1px);background-size:34px 34px;opacity:.65 }
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+@utility camera-grid { background-image:linear-gradient(90deg,color-mix(in oklab,var(--sidebar-foreground) 6%,transparent) 1px,transparent 1px),linear-gradient(color-mix(in oklab,var(--sidebar-foreground) 6%,transparent) 1px,transparent 1px);background-size:48px 48px }
